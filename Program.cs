@@ -19,8 +19,6 @@ void printFixArray(string[] array, string[] newArray)
 //функция узнаем сколько элементов  массива  меньше или равно n символа и фильтрации.
 string[] arrayOfLengthThreeStrings(string[] array, int value)
 {
-    string[] oldArray = array;
-
     int cnt = 0;
     foreach (string elements in array)
     {
