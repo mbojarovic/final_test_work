@@ -16,4 +16,37 @@ void printFixArray(string[] array, string[] newArray)
     printArray(newArray);
 }
 
+//функция узнаем сколько элементов  массива  меньше или равно n символа и фильтрации.
+string[] arrayOfLengthThreeStrings(string[] array, int value)
+{
+    string[] oldArray = array;
+
+    int cnt = 0;
+    foreach (string elements in array)
+    {
+        if (elements.Length <= value)
+        {
+            cnt++;
+        }
+    }
+    string[] newArray = new string[cnt];
+
+    int count = -1;
+
+    foreach (string elements1 in array)
+    {
+        if (elements1.Length <= value)
+        {
+            count++;
+            newArray[count] = elements1; // используем каунт как индексацию новава массива
+        }
+    }
+    return newArray;
+}
+
+int num = 3; //сколько элементов  массива  меньше или равно num
+string[] array = new string[] { "ccc", "4444", "hello", "22", "bbs", "world", "asd", "ttt" };
+string[] newArray = arrayOfLengthThreeStrings(array, num);
+printFixArray(array, newArray);
+
 
